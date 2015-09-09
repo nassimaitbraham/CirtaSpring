@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	
+	<!--
+		Template principal
+	-->
+	<definition name="template-main" template="/WEB-INF/jsp/layouts/main.jsp">
+		<put-attribute name="banner-content" value="/WEB-INF/jsp/sections/banner.jsp" />
+		<put-attribute name="title-content" value="Titre" />
+		<put-attribute name="primary-content" value="" />
+		<put-attribute name="footer-content" value="/WEB-INF/jsp/sections/footer.jsp" />
+	</definition>
+	
+		<!--
+		Template detaillee
+	-->
+	<definition name="template-detail" template="/WEB-INF/jsp/layouts/detail.jsp">
+		<put-attribute name="banner-content" value="/WEB-INF/jsp/sections/banner.jsp" />
+		<put-attribute name="title-content" value="Titre" />
+		<put-attribute name="subtitle-content" value="" />
+		<put-attribute name="primary-content" value="" />
+		<put-attribute name="footer-content" value="/WEB-INF/jsp/sections/footer.jsp" />
+	</definition>
+	
+	
+	
+	<!-- Concrete page. To use this page, your controller must return the name "acceuil-tiles" -->
+	<definition name="acceuil-tiles" extends="template-detail">
+		<put-attribute name="subtitle-content" value="Sous titre" />
+		<put-attribute name="primary-content" value="/WEB-INF/jsp/contents/acceuil.jsp" />
+	</definition>
+
+		
+</tiles-definitions>

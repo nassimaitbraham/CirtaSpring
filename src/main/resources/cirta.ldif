@@ -1,0 +1,76 @@
+version: 1
+dn: dc=maxcrc,dc=com
+objectClass: domain
+objectClass: top
+dc: maxcrc
+o: cirta
+
+dn: ou=People,dc=maxcrc,dc=com
+objectClass: organizationalUnit
+objectClass: top
+description: Container for user entries
+ou: People
+
+dn: ou=Personnel,ou=People,dc=maxcrc,dc=com
+objectClass: organizationalUnit
+objectClass: top
+businessCategory: Divers Personnel de l'entreprise
+ou: Personnel
+
+dn: uid=nasnet,ou=Personnel,ou=People,dc=maxcrc,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: posixAccount
+objectClass: top
+businessCategory: Cadre
+cn: AITECH1
+gidNumber: 1985
+givenName: Nassim
+homeDirectory: /home/nasnet
+mail: nasnet@hotmail.fr
+postalAddress:: IERldWlsIGxhIGJhcnJl
+postalCode: 95170
+roomNumber: 10
+sn: nassimus
+street: rue xxxxx
+telephoneNumber: 0646330000
+uid: nasnet
+uidNumber: 77
+userPassword:: e01ENX1udk5vVFRoU0tRcmtneWJQM1RqVEJnPT0=
+
+dn: uid=lyesnet,ou=Personnel,ou=People,dc=maxcrc,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: posixAccount
+objectClass: top
+businessCategory: Cadre informatique
+cn: AITECH2
+gidNumber: 1984
+givenName: lyes
+homeDirectory: /home/lyesnet
+mail: glyes@gmail.com
+o: AITECH
+sn: lyes
+uid: lyesnet
+uidNumber: 424
+userPassword:: e01ENX12NHVYSkRLTTQzYklmSFlSdWduajNRPT0=
+
+dn: ou=groupes,ou=People,dc=maxcrc,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: groupes
+
+dn: cn=USER,ou=groupes,ou=People,dc=maxcrc,dc=com
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: USER
+uniqueMember: uid=nasnet,ou=Personnel,ou=People,dc=maxcrc,dc=com
+
+dn: cn=INVITE,ou=groupes,ou=People,dc=maxcrc,dc=com
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: INVITE
+uniqueMember: uid=lyesnet,ou=Personnel,ou=People,dc=maxcrc,dc=com
+

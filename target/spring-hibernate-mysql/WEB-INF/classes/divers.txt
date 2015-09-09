@@ -1,0 +1,15 @@
+http://localhost:8080/spring-hibernate-mysql/welcome
+
+insert into users values (0,1,'9ef3684d3852290ae48326cfdd38d306','nasnet');
+insert into user_roles values(0,'ROLE_USER');
+insert into user_roles values(0,'ROLE_ADMIN');
+
+
+insert into users values (2,1,'9ef3684d3852290ae48326cfdd38d306','lyesnet');
+insert into user_roles values(2,'ROLE_USER');
+
+
+
+insert into person values (0,'Nassim','Ait Braham',1985);
+
+

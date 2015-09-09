@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	
+	<!--
+		We declare a new template named template-main.
+		This template is used for displaying the main page.
+		It has 4 attributes. These attributes are placeholder for our contents
+		For each attribute, we have assigned a corresponding JSP
+	-->
+	<definition name="template-main" template="/WEB-INF/jsp/layouts/main.jsp">
+		<put-attribute name="banner-content" value="/WEB-INF/jsp/sections/banner.jsp" />
+		<put-attribute name="title-content" value="Pet Type" />
+		<put-attribute name="primary-content" value="" />
+		<put-attribute name="footer-content" value="/WEB-INF/jsp/sections/footer.jsp" />
+	</definition>
+	
+		<!--
+		We declare a new template named template-detail.
+		This template is used for displaying details of an item.
+		It has 5 attributes. These attributes are placeholder for our contents
+		For each attribute, we have assigned a corresponding JSP
+	-->
+	<definition name="template-detail" template="/WEB-INF/jsp/layouts/detail.jsp">
+		<put-attribute name="banner-content" value="/WEB-INF/jsp/sections/banner.jsp" />
+		<put-attribute name="title-content" value="Pet Type" />
+		<put-attribute name="subtitle-content" value="" />
+		<put-attribute name="primary-content" value="" />
+		<put-attribute name="footer-content" value="/WEB-INF/jsp/sections/footer.jsp" />
+	</definition>
+	
+	<!-- Concrete page. To use this page, your controller must return the name "pet-tiles" -->
+	<definition name="pet-tiles" extends="template-main">
+		<put-attribute name="primary-content" value="/WEB-INF/jsp/contents/pets.jsp" />
+	</definition>
+	
+	<!-- Concrete page. To use this page, your controller must return the name "dog-tiles" -->
+	<definition name="dog-tiles" extends="template-detail">
+		<put-attribute name="subtitle-content" value="Canines" />
+		<put-attribute name="primary-content" value="/WEB-INF/jsp/contents/dogs.jsp" />
+	</definition>
+
+	<!-- Concrete page. To use this page, your controller must return the name "cat-tiles" -->
+	<definition name="cat-tiles" extends="template-detail">
+		<put-attribute name="subtitle-content" value="Felines" />
+		<put-attribute name="primary-content" value="/WEB-INF/jsp/contents/cats.jsp" />
+	</definition>
+	
+</tiles-definitions>
